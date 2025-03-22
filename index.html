@@ -59,17 +59,51 @@
           </div>
     </header>
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="my-5 mx-auto w-25">
-        <form>
+        <form id="formulario">
             <h1 class="my-5">Formulario</h1>
             <div class="mb-3">
-              <label for="exampleInputEmail1" class="form-label">Email address</label>
-              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-              <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+              <label for="" class="form-label">Nombre Completo</label>
+              <input type="name" class="form-control" id="nombre" aria-describedby="nombre">
+             
             </div>
             <div class="mb-3">
-              <label for="exampleInputPassword1" class="form-label">Password</label>
-              <input type="password" class="form-control" id="exampleInputPassword1">
+              <label for="" class="form-label">Nombre usuario</label>
+              <input type="name" class="form-control" id="nombreusuario" aria-describedby="emailHelp">
+              
+            </div>
+            <div class="mb-3">
+              <label for="" class="form-label">Correo Electronico</label>
+              <input type="email" class="form-control" id="email" aria-describedby="email">
+           
+            </div>
+            <div class="mb-3">
+              <label for="" class="form-label">Contraseña</label>
+              <input type="password" class="form-control" id="contraseña">
+            </div>
+            <div class="mb-3">
+              <label for="" class="form-label">Repetir contraseña</label>
+              <input type="password" class="form-control" id="contraseña">
+            </div>
+            <div class="mb-3">
+              <label for="" class="form-label">Fecha nacimiento</label>
+              <input type="date" class="form-control" id="fecha_nacimiento" aria-describedby="email">
+           
+            </div>
+            <div class="mb-3">
+              <label for="" class="form-label">Dirección</label>
+              <input type="name" class="form-control" id="direccion" aria-describedby="emailHelp">
+              
             </div>
             <div class="mb-3 form-check">
               <input type="checkbox" class="form-check-input" id="exampleCheck1">
@@ -78,6 +112,27 @@
             <button type="submit" class="btn btn-primary">Submit</button>
           </form>
     </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     <section>
@@ -167,4 +222,35 @@
 </body>
 
 <script src="./static/js/jquery-3.7.1.min.js"></script>
+
+
+<!-- Bootstrap 5 CSS<script>
+
+  const form = document.getElementById('formulario')
+  const nombre = document.getElementById('nombre')
+
+  form.addEventListener('submit', function(event){
+    event.preventDefault();
+
+    if(nombre.value === '') {
+      console.log('Nombre viene vacio')
+
+    }
+
+
+  })
+</script> -->
+
+
+<script>
+  $(document).ready(function() {
+    $('#formulario').submit(function(event) {
+      event.preventDefault();
+
+      if($('#nombre').val() === '') {
+        console.log("Jquery Nombre Esta vacio")
+      }
+    })
+  })
+</script>
 </html>
