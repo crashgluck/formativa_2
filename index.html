@@ -279,5 +279,14 @@
       }
     })
   })
+  $(document).ready(function() {
+    $('#formulario').submit(function(event) {
+      event.preventDefault();
+      let contraseña = $("$contraseña").val;
+      let regex = /^(?=.*[A-Z])(?=.*\d).+$/;
+      if(!regex.test(contraseña))
+      console.log("la contraseña debe tener un número y una mayúscula");
+      })
+  })
 </script>
 </html>
